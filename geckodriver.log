@@ -877,3 +877,184 @@ JavaScript warning: https://il.shein.com/7orklI9K9aJNY/TzG/ty8AGBYxD_Y/awmi0LfNw
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 
+1655976593922	geckodriver	INFO	Listening on 127.0.0.1:51922
+1655976596968	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51923" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Hamza\\AppData\\Local\\Temp\\rust_mozprofilew1dExo"
+1655976597240	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:51923
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Hamza\\AppData\\Local\\Temp\\rust_mozprofilew1dExo\\search.json.mozlz4", (void 0)))
+1655976599184	Marionette	INFO	Listening on port 51946
+DevTools listening on ws://localhost:51923/devtools/browser/cbf33488-37fa-46b8-bba4-288ad44860d4
+Read port: 51946
+1655976599269	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript error: , line 0: uncaught exception: Object
+1655976603861	Marionette	INFO	Stopped listening on port 51946
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+1655976616954	geckodriver	INFO	Listening on 127.0.0.1:52034
+1655976620013	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52035" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Hamza\\AppData\\Local\\Temp\\rust_mozprofileWzBsUP"
+1655976620300	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52035
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Hamza\\AppData\\Local\\Temp\\rust_mozprofileWzBsUP\\search.json.mozlz4", (void 0)))
+1655976622290	Marionette	INFO	Listening on port 52058
+Read port: 52058
+1655976622326	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:52035/devtools/browser/fb92022f-2adf-433b-a0d4-7c0c5a8893b2
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/devices/fpv2.1.js, line 1: unreachable code after return statement
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/libs/geetest/fullpage.1.1.9.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sheinsz.ltwebstatic.com/she_dist/assets/core-vendors.3e61d6.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://il.shein.com/7orklI9K9aJNY/TzG/ty8AGBYxD_Y/awmi0LfNw1aE/BzYlJg/QWwNP/A8zVxA, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1655976636502	Marionette	INFO	Stopped listening on port 52058
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+

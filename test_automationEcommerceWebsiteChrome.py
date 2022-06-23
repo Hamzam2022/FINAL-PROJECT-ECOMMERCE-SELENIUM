@@ -69,22 +69,19 @@ def test_verifyInvalidEmailAddressErrorMessage(driver):
         time.sleep(3)
 
 def test_verifyMandatoryFieldsErrorMessage(driver):
-    element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
-    driver.execute_script("arguments[0].click();", element1)
+    element = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element)
     driver.find_element(By.CSS_SELECTOR,
-                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
+                        ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
-                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
-        "stewqd1d@fdsdhf.com")
+                        ".page-signup__emailLoginItem > .input-area-password .S-input__inner").send_keys(
+        "h1234567")
+    driver.find_element(By.CSS_SELECTOR, ".input-area-confirm-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR, ".input-area-confirm-password .S-input__inner").send_keys("h1234567")
     driver.find_element(By.CSS_SELECTOR,
-                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
-    driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
+                        ".page-login__stylePreference:nth-child(4) .S-checkbox:nth-child(2) .S-checkbox__input-inner").click()
+    driver.find_element(By.CSS_SELECTOR, ".login-btn:nth-child(6) span").click()
     time.sleep(5)
-
-    element2 = driver.find_element(By.CSS_SELECTOR,".error .error-tip")
-
-    assert element2.text == "Please enter your password."
-
-
-
-    time.sleep(3)
+    element1 = driver.find_element(By.CSS_SELECTOR, ".error .error-tip")
+    driver.execute_script("arguments[0].click();", element1)
+    assert element1.text == "Please enter an email address."
