@@ -29,7 +29,7 @@ def test_testregister(driver):
                              ".page-signup__emailLoginItem > .input-area-email .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
                              ".page-signup__emailLoginItem > .input-area-email .S-input__inner").send_keys(
-        "tfamotttg@gmail.com")
+        "tfakotttg@gmail.com")
     driver.find_element(By.CSS_SELECTOR,
                              ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
@@ -55,17 +55,15 @@ def test_verifyInvalidEmailAddress(driver):
                                  ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
         driver.find_element(By.CSS_SELECTOR,
                                  ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
-            "sdjdsjkdfkjfdd@fdsdhf.com")
+            "stewqd1d@fdsdhf.com")
         driver.find_element(By.CSS_SELECTOR,
                                  ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
         driver.find_element(By.CSS_SELECTOR,
                                  ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys("6jdhfdkldl")
         driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
-        time.sleep(10)
-        # driver.find_element(By.CSS_SELECTOR,'#div.recaptcha-checkbox-checkmark').click()
+        time.sleep(5)
 
-        # time.sleep(10)
-        # element2 = driver.find_element(By.CSS_SELECTOR,
-        #                                 ".error .error-tip")
-        # driver.execute_script("arguments[0].click();", element2)
-        # assert element2.text == "The Email Address or Password you entered is incorrect."
+        element2 = driver.find_element(By.CSS_SELECTOR,
+                                        ".error .error-tip")
+        assert element2.text == "The Email Address or Password you entered is incorrect."
+        time.sleep(3)
