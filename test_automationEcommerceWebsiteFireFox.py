@@ -12,14 +12,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
-from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture()
 def driver():
-    edge_driver_binary = "./drivers/msedgedriver"
-    ser_edge = EdgeService(edge_driver_binary)
-    driver = webdriver.Edge(service=ser_edge)
+    firefox_driver_binary = "./drivers/geckodriver"
+    ser_firefox = FirefoxService(firefox_driver_binary)
+    driver = webdriver.Firefox(service=ser_firefox)
     driver.get('https://www.shein.com')
     yield driver
     driver.close()
@@ -33,7 +32,7 @@ def test_testregister(driver):
 
     driver.find_element(By.CSS_SELECTOR,
                              ".page-signup__emailLoginItem > .input-area-email .S-input__inner").send_keys(
-        "tfgherstg@gmail.com")
+        "tfgjstg@gmail.com")
     driver.find_element(By.CSS_SELECTOR,
                              ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
@@ -44,10 +43,6 @@ def test_testregister(driver):
     driver.find_element(By.CSS_SELECTOR,
                              ".page-login__stylePreference:nth-child(4) .S-checkbox:nth-child(2) .S-checkbox__input-inner").click()
     driver.find_element(By.CSS_SELECTOR, ".login-btn:nth-child(6) span").click()
-    element = driver.find_element(By.CSS_SELECTOR, ".login-btn:nth-child(6) span")
-    actions = ActionChains(driver)
-    time.sleep(5)
-    actions.move_to_element(element).perform()
     time.sleep(5)
     element1 = driver.find_element(By.CSS_SELECTOR, ".reg-show-top > p")
     driver.execute_script("arguments[0].click();", element1)
