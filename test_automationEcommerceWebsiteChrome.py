@@ -22,7 +22,7 @@ def driver():
     driver.close()
 
 
-def test_testregister(driver):
+def test_newUserRegistration(driver):
     element = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
     driver.execute_script("arguments[0].click();", element)
     driver.find_element(By.CSS_SELECTOR,
@@ -48,7 +48,7 @@ def test_testregister(driver):
 
 
 
-def test_verifyInvalidEmailAddress(driver):
+def test_verifyInvalidEmailAddressErrorMessage(driver):
         element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
         driver.execute_script("arguments[0].click();", element1)
         driver.find_element(By.CSS_SELECTOR,
@@ -67,3 +67,24 @@ def test_verifyInvalidEmailAddress(driver):
                                         ".error .error-tip")
         assert element2.text == "The Email Address or Password you entered is incorrect."
         time.sleep(3)
+
+def test_verifyMandatoryFieldsErrorMessage(driver):
+    element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element1)
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
+        "stewqd1d@fdsdhf.com")
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
+    time.sleep(5)
+
+    element2 = driver.find_element(By.CSS_SELECTOR,".error .error-tip")
+
+    assert element2.text == "Please enter your password."
+
+
+
+    time.sleep(3)
