@@ -92,7 +92,7 @@ def test_verifyMandatoryFieldsErrorMessage(driver):
     assert element2.text == "Please enter your password."
 
 
-def test_verifyMandatoryFieldsErrorMessage(driver):
+def test_verifyMandatoryFieldsErrorMessage2(driver):
     element = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
     driver.execute_script("arguments[0].click();", element)
     driver.find_element(By.CSS_SELECTOR,
@@ -135,3 +135,61 @@ def test_verifyIncorrectValuesErrorMessage(driver):
     element1 = driver.find_element(By.CSS_SELECTOR, ".normal-red > p:nth-child(1)")
     driver.execute_script("arguments[0].click();", element1)
     assert element1.text == "· 8 characters minimum"
+
+
+def test_verifyIncorrectValuesErrorMessage(driver):
+    element = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element)
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-signup__emailLoginItem > .input-area-email .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-signup__emailLoginItem > .input-area-email .S-input__inner").send_keys("tfakott")
+
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-signup__emailLoginItem > .input-area-password .S-input__inner").send_keys("h123")
+
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__stylePreference:nth-child(4) .S-checkbox:nth-child(2) .S-checkbox__input-inner").click()
+    driver.find_element(By.CSS_SELECTOR, ".login-btn:nth-child(6) span").click()
+    time.sleep(5)
+    element1 = driver.find_element(By.CSS_SELECTOR, ".error .error-tip")
+    driver.execute_script("arguments[0].click();", element1)
+    assert element1.text == "The email you entered is invalid. Please check your email and try again."
+
+    element1 = driver.find_element(By.CSS_SELECTOR, ".normal-red > p:nth-child(1)")
+    driver.execute_script("arguments[0].click();", element1)
+    assert element1.text == "· 8 characters minimum"
+
+
+def test_productSerch(driver):
+    element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element1)
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
+        "mograbi.ha@gmail.com")
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys(
+        "h1234567")
+    driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
+    time.sleep(5)
+
+    driver.find_element(By.CSS_SELECTOR, ".header-v2__nav2-wrapper:nth-child(4) .header-v2__nav2-txt").click()
+    time.sleep(3)
+    driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)").click()
+    driver.find_element(By.NAME, 'header-search').click()
+    driver.find_element(By.NAME, 'header-search').send_keys('Scoop Neck Striped Crop Tee')
+    driver.find_element(By.NAME, 'header-search').send_keys(Keys.ENTER)
+    time.sleep(3)
+    productName = driver.find_element(By.LINK_TEXT, 'Scoop Neck Striped Crop Tee')
+    assert productName.text == 'Scoop Neck Striped Crop Tee'
+
+
+
+
+

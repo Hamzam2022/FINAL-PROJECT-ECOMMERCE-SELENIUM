@@ -12,6 +12,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support import expected_conditions as EC
+
+
 @pytest.fixture()
 def driver():
     chrome_driver_binary = "./drivers/chromedriver"
@@ -26,19 +28,19 @@ def test_newUserRegistration(driver):
     element = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
     driver.execute_script("arguments[0].click();", element)
     driver.find_element(By.CSS_SELECTOR,
-                             ".page-signup__emailLoginItem > .input-area-email .S-input__inner").click()
+                        ".page-signup__emailLoginItem > .input-area-email .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
-                             ".page-signup__emailLoginItem > .input-area-email .S-input__inner").send_keys(
+                        ".page-signup__emailLoginItem > .input-area-email .S-input__inner").send_keys(
         "tfakotttg@gmail.com")
     driver.find_element(By.CSS_SELECTOR,
-                             ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
+                        ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
-                             ".page-signup__emailLoginItem > .input-area-password .S-input__inner").send_keys(
+                        ".page-signup__emailLoginItem > .input-area-password .S-input__inner").send_keys(
         "h1234567")
     driver.find_element(By.CSS_SELECTOR, ".input-area-confirm-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR, ".input-area-confirm-password .S-input__inner").send_keys("h1234567")
     driver.find_element(By.CSS_SELECTOR,
-                             ".page-login__stylePreference:nth-child(4) .S-checkbox:nth-child(2) .S-checkbox__input-inner").click()
+                        ".page-login__stylePreference:nth-child(4) .S-checkbox:nth-child(2) .S-checkbox__input-inner").click()
     driver.find_element(By.CSS_SELECTOR, ".login-btn:nth-child(6) span").click()
     time.sleep(5)
     element1 = driver.find_element(By.CSS_SELECTOR, ".reg-show-top > p")
@@ -46,27 +48,27 @@ def test_newUserRegistration(driver):
     assert element1.text == "Congratulations! You have successfully registered!"
 
 
-
-
 def test_verifyInvalidEmailAddressErrorMessage(driver):
-        element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
-        driver.execute_script("arguments[0].click();", element1)
-        driver.find_element(By.CSS_SELECTOR,
-                                 ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
-        driver.find_element(By.CSS_SELECTOR,
-                                 ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
-            "stewqd1d@fdsdhf.com")
-        driver.find_element(By.CSS_SELECTOR,
-                                 ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
-        driver.find_element(By.CSS_SELECTOR,
-                                 ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys("6jdhfdkldl")
-        driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
-        time.sleep(5)
+    element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element1)
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
+        "stewqd1d@fdsdhf.com")
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys(
+        "6jdhfdkldl")
+    driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
+    time.sleep(5)
 
-        element2 = driver.find_element(By.CSS_SELECTOR,
-                                        ".error .error-tip")
-        assert element2.text == "The Email Address or Password you entered is incorrect."
-        time.sleep(3)
+    element2 = driver.find_element(By.CSS_SELECTOR,
+                                   ".error .error-tip")
+    assert element2.text == "The Email Address or Password you entered is incorrect."
+    time.sleep(3)
+
 
 def test_verifyMandatoryFieldsErrorMessage(driver):
     element = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
@@ -111,3 +113,31 @@ def test_verifyIncorrectValuesErrorMessage(driver):
     element1 = driver.find_element(By.CSS_SELECTOR, ".normal-red > p:nth-child(1)")
     driver.execute_script("arguments[0].click();", element1)
     assert element1.text == "· 8 characters minimum"
+
+
+def test_productSerch(driver):
+    element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element1)
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
+        "mograbi.ha@gmail.com")
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys(
+        "h1234567")
+    driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
+    time.sleep(5)
+
+    driver.find_element(By.CSS_SELECTOR, ".header-v2__nav2-wrapper:nth-child(4) .header-v2__nav2-txt").click()
+    time.sleep(3)
+    driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)").click()
+    driver.find_element(By.NAME, 'header-search').click()
+    driver.find_element(By.NAME, 'header-search').send_keys('Scoop Neck Striped Crop Tee')
+    driver.find_element(By.NAME, 'header-search').send_keys(Keys.ENTER)
+    time.sleep(3)
+    productName = driver.find_element(By.LINK_TEXT, 'Scoop Neck Striped Crop Tee')
+    assert productName.text == 'Scoop Neck Striped Crop Tee'
+
