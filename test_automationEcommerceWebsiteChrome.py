@@ -31,7 +31,7 @@ def test_newUserRegistration(driver):
                         ".page-signup__emailLoginItem > .input-area-email .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
                         ".page-signup__emailLoginItem > .input-area-email .S-input__inner").send_keys(
-        "tfakotttg@gmail.com")
+        "JYTV3AW@gmail.com")
     driver.find_element(By.CSS_SELECTOR,
                         ".page-signup__emailLoginItem > .input-area-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
@@ -134,12 +134,19 @@ def test_productSearch(driver):
     driver.find_element(By.CSS_SELECTOR, ".header-v2__nav2-wrapper:nth-child(4) .header-v2__nav2-txt").click()
     time.sleep(3)
     driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)").click()
+
+    driver.find_element(By.CSS_SELECTOR, ".image-fade-out").click()
+    time.sleep(5)
+    expectedProductName =driver.find_element(By.CSS_SELECTOR, ".product-intro__head-name").text
     driver.find_element(By.NAME, 'header-search').click()
-    driver.find_element(By.NAME, 'header-search').send_keys('Scoop Neck Striped Crop Tee')
+    time.sleep(3)
+    driver.find_element(By.NAME, 'header-search').send_keys(expectedProductName)
     driver.find_element(By.NAME, 'header-search').send_keys(Keys.ENTER)
     time.sleep(3)
-    productName = driver.find_element(By.LINK_TEXT, 'Scoop Neck Striped Crop Tee')
-    assert productName.text == 'Scoop Neck Striped Crop Tee'
+    driver.find_element(By.LINK_TEXT,expectedProductName).click()
+    time.sleep(5)
+    actualProductName=driver.find_element(By.CSS_SELECTOR, ".product-intro__head-name").text
+    assert actualProductName == expectedProductName
 
 
 def test_BuyingProduct(driver):
@@ -162,7 +169,7 @@ def test_BuyingProduct(driver):
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)").click()
     time.sleep(5)
-    driver.find_element(By.LINK_TEXT, "Letter Graphic Short Sleeve Tee").click()
+    driver.find_element(By.CSS_SELECTOR, ".image-fade-out").click()
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR,
                         ".j-product-intro__size-radio-spopover_87_index4 .product-intro__size-radio-inner").click()
@@ -185,9 +192,48 @@ def test_addToWishlist(driver):
     time.sleep(5)
     element2 = driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)")
     driver.execute_script("arguments[0].click();", element2)
-    element3=driver.find_element(By.CSS_SELECTOR, ".S-product-item:nth-child(1) .S-product-item__add-wishlist_normal")
+    element3 = driver.find_element(By.CSS_SELECTOR, ".S-product-item:nth-child(1) .S-product-item__add-wishlist_normal")
     driver.execute_script("arguments[0].click();", element3)
     time.sleep(3)
-    siginText=driver.find_element(By.CSS_SELECTOR, ".page-login__container_item:nth-child(1) > .itemTitle").text
-    assert siginText=="Sign In"
+    siginText = driver.find_element(By.CSS_SELECTOR, ".page-login__container_item:nth-child(1) > .itemTitle").text
+    assert siginText == "Sign In"
     time.sleep(5)
+
+
+def test_verifyTotalPriceReflectedWhenQuantityChanged(driver):
+    element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
+    driver.execute_script("arguments[0].click();", element1)
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
+        "mograbi.ha@gmail.com")
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
+    driver.find_element(By.CSS_SELECTOR,
+                        ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys(
+        "h1234567")
+    driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
+    time.sleep(5)
+
+    driver.find_element(By.CSS_SELECTOR, ".header-v2__nav2-wrapper:nth-child(4) .header-v2__nav2-txt").click()
+    time.sleep(5)
+    driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)").click()
+    time.sleep(5)
+    driver.find_element(By.CSS_SELECTOR, ".image-fade-out").click()
+    time.sleep(5)
+    productPrice = driver.find_element(By.CSS_SELECTOR, ".from > span").text
+    driver.find_element(By.CSS_SELECTOR,
+                        ".j-product-intro__size-radio-spopover_87_index4 .product-intro__size-radio-inner").click()
+    driver.find_element(By.CSS_SELECTOR, ".product-intro__add-btn > .she-btn-black").click()
+    quantityButton = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, ".sui_icon_plus_16px:nth-child(1)")))
+    # driver.find_element(By.CSS_SELECTOR, ".sui_icon_plus_16px:nth-child(1)").click()
+    quantityButton.click()
+    time.sleep(2)
+    totalPrice = driver.find_element(By.CSS_SELECTOR, ".total-num").text
+    time.sleep(3)
+    totalPrice=float(totalPrice[1:])
+    productPrice=float(productPrice[1:])
+    assert  totalPrice == productPrice * 2
+
