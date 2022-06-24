@@ -146,7 +146,7 @@ def test_verifyIncorrectValuesErrorMessage(driver):
     assert element1.text == "· 8 characters minimum"
 
 
-def test_productSerch(driver):
+def test_productSearch(driver):
     element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
     driver.execute_script("arguments[0].click();", element1)
     time.sleep(3)
@@ -174,7 +174,7 @@ def test_productSerch(driver):
     assert productName.text == 'Scoop Neck Striped Crop Tee'
 
 
-def test_testBuyingProduct(driver):
+def test_BuyingProduct(driver):
     element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
     driver.execute_script("arguments[0].click();", element1)
     time.sleep(3)
@@ -209,3 +209,18 @@ def test_testBuyingProduct(driver):
     time.sleep(3)
     placeOrderMessage=driver.find_element(By.CSS_SELECTOR, ".S-button__H54PX > span").text
     assert placeOrderMessage =="PLACE ORDER"
+
+
+def test_addToWishlist(driver):
+    element1 = driver.find_element(By.CSS_SELECTOR, ".header-v2__nav2-wrapper:nth-child(4) .header-v2__nav2-txt")
+    driver.execute_script("arguments[0].click();", element1)
+    time.sleep(5)
+    element2 = driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)")
+    driver.execute_script("arguments[0].click();", element2)
+    time.sleep(3)
+    element3=driver.find_element(By.CSS_SELECTOR, ".S-product-item:nth-child(1) .S-product-item__add-wishlist_normal")
+    driver.execute_script("arguments[0].click();", element3)
+    time.sleep(5)
+    siginText=driver.find_element(By.CSS_SELECTOR, ".page-login__container_item:nth-child(1) > .itemTitle").text
+    assert siginText=="Sign In"
+    time.sleep(5)
