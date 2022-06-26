@@ -21,10 +21,7 @@ def driver():
     fire_fox_options = FireFoxOptions()
     fire_fox_options.add_argument("--width=414")
     fire_fox_options.add_argument("--height=896")
-    fire_fox_options.set_preference("general.useragent.override",
-                                    "Mozilla/5.0 (Linux; CPU iPhone OS 14_6 like Mac OS "
-                                    "X) AppleWebKit/605.1.15 (KHTML, like Gecko) "
-                                    "Version/14.0.3 Mobile/15E148 Safari/604.1")
+    fire_fox_options.set_preference("general.useragent.override","Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36")
     ser_firefox = FirefoxService(Firefox_driver_binary)
     driver = webdriver.Firefox(service=ser_firefox, options=fire_fox_options)
     driver.get('https://www.shein.com')
@@ -32,6 +29,10 @@ def driver():
     yield driver
     driver.close()
 
+
+# "Mozilla/5.0 ( CPU iPhone OS 14_6 like Mac OS "
+#                                     "X) AppleWebKit/605.1.15 (KHTML, like Gecko) "
+#                                     "Version/14.0.3 Mobile/15E148 Safari/604.1"
 
 def test_userRegistration(driver):
     element = driver.find_element(By.LINK_TEXT, "Me")

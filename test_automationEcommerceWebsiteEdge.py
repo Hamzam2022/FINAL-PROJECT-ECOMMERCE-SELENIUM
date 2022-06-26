@@ -165,6 +165,7 @@ def test_verifyIncorrectValuesErrorMessage(driver):
 def test_productSearch(driver):
     element1 = driver.find_element(By.CSS_SELECTOR, ".sui_icon_nav_me_24px")
     driver.execute_script("arguments[0].click();", element1)
+    time.sleep(3)
     driver.find_element(By.CSS_SELECTOR,
                         ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
@@ -175,14 +176,15 @@ def test_productSearch(driver):
     driver.find_element(By.CSS_SELECTOR,
                         ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").send_keys(
         "h1234567")
+    time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, ".page-login__emailLoginItem > .login-btn:nth-child(5) span").click()
     time.sleep(5)
 
     driver.find_element(By.CSS_SELECTOR, ".header-v2__nav2-wrapper:nth-child(4) .header-v2__nav2-txt").click()
     time.sleep(3)
     driver.find_element(By.CSS_SELECTOR, ".cloud-tags__item:nth-child(5)").click()
-
-    driver.find_element(By.CSS_SELECTOR, ".image-fade-out").click()
+    time.sleep(3)
+    driver.find_element(By.CSS_SELECTOR, "#product-list-v2 > div.product-list-v2__main.product-list-v2__main_side.product-list-v2__main_ie > div.product-list-v2__container > section > div.product-list.j-expose__product-list.j-product-list-info.j-da-event-box > section:nth-child(1) > div.S-product-item__wrapper > a > img.S-product-item__img-submain.image-fade-out").click()
     time.sleep(5)
     expectedProductName = driver.find_element(By.CSS_SELECTOR, ".product-intro__head-name").text
     driver.find_element(By.NAME, 'header-search').click()
