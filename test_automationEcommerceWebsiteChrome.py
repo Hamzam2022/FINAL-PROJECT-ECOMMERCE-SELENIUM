@@ -54,7 +54,7 @@ def test_verifyInvalidEmailAddressErrorMessage(driver):
                         ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,
                         ".page-login__container_item:nth-child(1) .input-area-email .S-input__inner").send_keys(
-        "stewqd1d@fdsdhf.com")
+        "stew2d1d@fdsdhf.com")
     driver.find_element(By.CSS_SELECTOR,
                         ".page-login__container_item:nth-child(1) .input-area-password .S-input__inner").click()
     driver.find_element(By.CSS_SELECTOR,

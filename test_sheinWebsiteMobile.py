@@ -30,9 +30,6 @@ def driver():
     driver.close()
 
 
-# "Mozilla/5.0 ( CPU iPhone OS 14_6 like Mac OS "
-#                                     "X) AppleWebKit/605.1.15 (KHTML, like Gecko) "
-#                                     "Version/14.0.3 Mobile/15E148 Safari/604.1"
 
 def test_userRegistration(driver):
     element = driver.find_element(By.LINK_TEXT, "Me")
@@ -187,11 +184,8 @@ def test_BuyingProduct(driver):
 
 
 def test_addToWishlistWithoutSignin(driver):
-    element = driver.find_element(By.CSS_SELECTOR, ".S-tab-item_selected")
-    driver.execute_script("arguments[0].click();", element)
-    time.sleep(3)
     element1 = driver.find_element(By.CSS_SELECTOR,
-                                   "div:nth-child(6) .carousel-cols__four:nth-child(1) > .carousel-cols__four-item:nth-child(3) .falcon-lazyload")
+                                   "div:nth-child(7) .carousel-cols__four:nth-child(1) > .carousel-cols__four-item:nth-child(3) .falcon-lazyload")
     driver.execute_script("arguments[0].click();", element1)
     time.sleep(3)
     element3 = driver.find_element(By.CSS_SELECTOR, ".product-item-ctn:nth-child(2) .product-item__main-img")
